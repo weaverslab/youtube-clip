@@ -78,7 +78,7 @@ export function AppProvider({ children }: ChildrenProps) {
   const [currentTemplate, setCurrentTemplate] = useState<Template | undefined>(
     TEMPLATES[0]
   );
-  const [frameColor, setFrameColor] = useState<string>('#FFFFFF');
+  const [frameColor, setFrameColor] = useState<string>('light');
   const [playState, setPlayState] = useState<'play' | 'stop'>('stop');
 
   const changeTemplate = useCallback(

@@ -44,11 +44,13 @@ const VideoItem: React.FC<Props> = ({ videoId, clip }) => {
   useEffect(() => {
     if (videoRef.current) {
       const videoPlayer = videoRef.current.getInternalPlayer();
-      videoPlayer.mute();
-      if (playState === 'play') {
-        videoPlayer.playVideo();
-      } else if (playState === 'stop') {
-        videoPlayer.pauseVideo();
+      if (videoPlayer) {
+        videoPlayer.mute();
+        if (playState === 'play') {
+          videoPlayer.playVideo();
+        } else if (playState === 'stop') {
+          videoPlayer.pauseVideo();
+        }
       }
     }
   }, [playState]);

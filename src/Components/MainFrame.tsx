@@ -10,9 +10,9 @@ interface StyledProps {
 const Wrapper = styled.div<StyledProps>`
   position: relative;
   width: 800px;
-  height: 600px;
-  border: 1px solid red;
-  background-color: ${(props) => props.frameColor};
+  height: 700px;
+  background-color: ${(props) =>
+    props.frameColor === 'light' ? props.theme.colors.grey : '#000000'};
 `;
 
 const MainFrame: React.FC = () => {

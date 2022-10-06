@@ -8,6 +8,16 @@ const GlobalStyle = styled.createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+  html,
+  body {
+    font-family: 'Metrophobic', sans-serif;
+    color: ${(props) => props.theme.colors.text};
+  }
+
+  button {
+    font-family: 'Metrophobic', sans-serif;
+    border: none;
+  }
 `;
 
 export default GlobalStyle;
